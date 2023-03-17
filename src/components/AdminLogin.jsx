@@ -19,17 +19,18 @@ export default function AdminLogin() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstName: "",
-      secondName: "",
+      ministry: "",
+      organization: "",
       emailId: "",
+      country: "",
       password: "",
       confirmPassword: "",
-      country: "",
     },
   });
 
   const onSubmit = (data) => {
     console.log("Form submitted", { data });
+    // const userIp =
   };
 
   return (
@@ -41,11 +42,11 @@ export default function AdminLogin() {
       gap="5"
     >
       <FormControl>
-        <FormLabel>First Name</FormLabel>
+        <FormLabel>Ministry</FormLabel>
         <Input bg="white" {...register("firstName")} />
       </FormControl>
       <FormControl>
-        <FormLabel>Last Name</FormLabel>
+        <FormLabel>Organization</FormLabel>
         <Input bg="white" {...register("secondName")} />
       </FormControl>
 
@@ -64,6 +65,8 @@ export default function AdminLogin() {
         <Input bg="white" {...register("password")} />
       </FormControl>
 
+      {/* role, privateKey, recentIP */}
+
       <FormControl>
         <FormLabel>Confirm Password</FormLabel>
         <Input bg="white" {...register("confirmPassword")} />
@@ -81,8 +84,8 @@ export default function AdminLogin() {
       </Button>
 
       <Flex>
-        <Text>Don't have an account?</Text>
-        <Text>
+        <Text whiteSpace={"nowrap"}>Don't have an account?</Text>
+        <Text whiteSpace={"nowrap"}>
           <Link to="/signUp">Sign up!</Link>
         </Text>
       </Flex>

@@ -8,6 +8,7 @@ import {
   Button,
   StackDivider,
   Divider,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -71,14 +72,16 @@ export default function Home() {
           display="flex"
           flexDir={"column"}
           gap="4"
-          alignItems={"start"}
+          alignItems={"end"}
           w="65%"
           position={"absolute"}
           right={0}
           top={0}
           zIndex={"0"}
           height="280px"
-        />
+        >
+          <Image src="./hero.png" />
+        </Box>
       </Flex>
 
       <Stack
@@ -207,12 +210,12 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Flex mt={"40px"}>
-        <Box>
+      <Flex mt={"40px"} justifyContent="space-between">
+        <Box w="50%">
           <Text fontSize={"3xl"} fontWeight={"bold"}>
             About Us
           </Text>
-          <Text w="50%" mt="10">
+          <Text mt="10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
             sagittis sapien. Phasellus sodales blandit augue eget ullamcorper.
             Integer non nisi finibus, consequat justo eu, ullamcorper ante.
@@ -226,7 +229,9 @@ export default function Home() {
           </Text>
         </Box>
 
-        <Box>{/* <Image src="" /> */}</Box>
+        <Box alignSelf={"center"}>
+          <Image src="./about.png" w={"full"} />
+        </Box>
       </Flex>
 
       <Box as="footer"></Box>

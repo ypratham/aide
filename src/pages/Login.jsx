@@ -7,6 +7,7 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import AdminLogin from "../components/AdminLogin";
@@ -28,20 +29,24 @@ export default function Login() {
         <Box w="full" h="4px" bg="#9DC08B" />
       </Flex>
 
-      <Tabs variant="enclosed">
-        <TabList>
-          <Tab>User</Tab>
-          <Tab>Admin</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <UserLogin />
-          </TabPanel>
-          <TabPanel>
-            <AdminLogin />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+      <Flex alignItems={"center"} mt="10">
+        <Tabs w="full" variant="enclosed">
+          <TabList>
+            <Tab fontSize={"xl"}>User</Tab>
+            <Tab fontSize={"xl"}>Admin</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <UserLogin />
+            </TabPanel>
+            <TabPanel>
+              <AdminLogin />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+
+        <Image w="25%" src="./login.png" />
+      </Flex>
     </Box>
   );
 }
