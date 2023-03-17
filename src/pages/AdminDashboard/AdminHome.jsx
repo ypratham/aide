@@ -10,9 +10,19 @@ import {
   Text,
   Button,
   Stack,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
+import { useQuery } from "react-query";
 import SearchIcon from "../../assets/search_icon.svg";
+import CreateCampaign from "../../components/Models/CreateCampaign";
 
 export default function AdminHome() {
   return (
@@ -25,8 +35,8 @@ export default function AdminHome() {
       bg="#E9E7DC   "
       overflowX={"auto"}
     >
-      <Box>
-        <FormControl>
+      <Flex gap="10">
+        <FormControl w={"max-content"}>
           <InputGroup w="max-content">
             <Input bg="white" placeholder="Search here for anything" />
             <InputRightAddon bg="white">
@@ -34,7 +44,8 @@ export default function AdminHome() {
             </InputRightAddon>
           </InputGroup>
         </FormControl>
-      </Box>
+        <CreateCampaign />
+      </Flex>
 
       <Flex gap="10" mt="10" alignItems={"stretch"}>
         <Stack w="75%">
@@ -67,10 +78,6 @@ export default function AdminHome() {
             </StackItem>
           ))}
         </Stack>
-
-        <Button bg="#35523F" color="white">
-          Create a new Campaigns
-        </Button>
       </Flex>
     </Box>
   );

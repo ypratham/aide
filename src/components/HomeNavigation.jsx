@@ -50,6 +50,12 @@ const Route = [
     icon: LocationIcon,
     path: "/",
   },
+  {
+    id: 5,
+    name: "Dashboard",
+    icon: LocationIcon,
+    path: "/dashboard/user",
+  },
 ];
 
 const NavigationItem = ({ src, name, path }) => {
