@@ -30,7 +30,7 @@ export default function Login() {
       </Flex>
 
       <Flex alignItems={"center"} mt="10">
-        <Tabs w="full" variant="enclosed">
+        <Tabs w="full" variant="soft-rounded" colorScheme={"green"}>
           <TabList>
             <Tab fontSize={"xl"}>User</Tab>
             <Tab fontSize={"xl"}>Admin</Tab>

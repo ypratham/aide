@@ -38,7 +38,7 @@ export default function Home() {
       >
         <Box
           bg="#323131"
-          p="8"
+          p="10"
           px="20"
           color={"white"}
           display="flex"
@@ -54,14 +54,16 @@ export default function Home() {
           zIndex={1}
         >
           <Text fontSize="3xl">Let’s make the world a better place </Text>
-          <Text w={"70%"}>
+          <Text w={"70%"} fontSize="md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
             sagittis sapien. Phasellus sodales blandit augue eget ullamcorper.
             Integer non nisi finibus, consequat justo eu, ullamcorper ante.{" "}
           </Text>
-          <Button bg="aide.700" color={"white"} _hover={{}}>
-            <Link to={"/login"}>Donate Now</Link>
-          </Button>
+          <Link to={"/login"}>
+            <Button bg="aide.700" fontSize="md" color={"white"} _hover={{}}>
+              Donate Now
+            </Button>
+          </Link>
         </Box>
 
         <Box

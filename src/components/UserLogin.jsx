@@ -6,10 +6,10 @@ import {
   Grid,
   Input,
   Text,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link, NavLink } from "react-router-dom";
 
 export default function UserLogin() {
   const {
@@ -69,18 +69,16 @@ export default function UserLogin() {
         <Input bg="white" {...register("confirmPassword")} />
       </FormControl>
 
-      <NavLink to={"/dashboard/user"}>
-        <Button
-          gridColumnStart={1}
-          gridColumnEnd={3}
-          bg="#35523F"
-          color="white"
-          w="max-content"
-          _hover={{}}
-        >
-          Login
-        </Button>
-      </NavLink>
+      <Button
+        gridColumnStart={1}
+        gridColumnEnd={3}
+        bg="#35523F"
+        color="white"
+        w="max-content"
+        _hover={{}}
+      >
+        Login
+      </Button>
 
       <Flex>
         <Text>Don't have an account?</Text>
