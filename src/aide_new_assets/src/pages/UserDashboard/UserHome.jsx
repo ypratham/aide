@@ -12,7 +12,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React from "react";
-import SearchIcon from "../../assets/search_icon.svg";
+import SearchIcon from "../../../assets/search_icon.svg";
 
 export default function UserHome() {
   return (

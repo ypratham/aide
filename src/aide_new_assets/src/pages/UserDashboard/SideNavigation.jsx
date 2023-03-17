@@ -1,10 +1,10 @@
 import { Box, Heading, StackItem, Stack, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { Outlet } from "react-router-dom";
-import HomeIcon from "../../assets/home_icon.svg";
-import HelpIcon from "../../assets/help_icon.svg";
-import ListIcon from "../../assets/list_icon.svg";
-import PhoneIcon from "../../assets/phone_icon.svg";
+import HomeIcon from "../../../assets/home_icon.svg";
+import HelpIcon from "../../../assets/help_icon.svg";
+import ListIcon from "../../../assets/list_icon.svg";
+import PhoneIcon from "../../../assets/phone_icon.svg";
 
 export default function SideNavigation() {
   return (
