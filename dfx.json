@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "aide_new": {
+      "main": "src/aide_new/main.mo",
+      "type": "motoko"
+    },
+    "aide_new_assets": {
+      "dependencies": [
+        "aide_new"
+      ],
+      "frontend": {
+        "entrypoint": "src/aide_new_assets/src/index.html"
+      },
+      "source": [
+        "src/aide_new_assets/assets",
+        "dist/aide_new_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
