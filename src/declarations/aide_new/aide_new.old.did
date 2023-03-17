@@ -1,0 +1,41 @@
+type Transaction = 
+ record {
+   amountInDollars: text;
+   id: text;
+   remarks: text;
+   status: bool;
+ };
+type Sender = 
+ record {
+   email: text;
+   id: text;
+   name: text;
+   residentCountry: text;
+ };
+type Government = 
+ record {
+   country: text;
+   id: text;
+   ministry: text;
+   organization: text;
+ };
+type FundDetails = 
+ record {
+   campaign: CampaignData;
+   from: Sender;
+   id: text;
+   to: Government;
+   transaction: Transaction;
+ };
+type CampaignData = 
+ record {
+   description: text;
+   fundsToBeRaised: int64;
+   id: text;
+   title: text;
+ };
+service : {
+  createFunds: (text, Sender, Government, CampaignData, Transaction) ->
+   () oneway;
+  getFunds: () -> (vec FundDetails) query;
+}
