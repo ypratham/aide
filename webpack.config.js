@@ -81,13 +81,21 @@ module.exports = {
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
       {
         test: /\.svg$/,
-        loader: "svg-inline-loader",
+        use: [
+          {
+            loader: "svg-url-loader",
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, asset_entry),
+      inject: "body",
       cache: false,
     }),
     new CopyPlugin({

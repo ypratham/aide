@@ -45,7 +45,10 @@ export default function Login() {
           </TabPanels>
         </Tabs>
 
-        <Image w="25%" src="./login.png" />
+        <Image
+          w="25%"
+          src="https://i.ibb.co/fCzXvNx/diversity-images-removebg-preview-1.png"
+        />
       </Flex>
     </Box>
   );

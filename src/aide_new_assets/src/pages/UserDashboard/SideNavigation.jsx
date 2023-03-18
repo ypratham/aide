@@ -3,8 +3,6 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import HomeIcon from "../../../assets/home_icon.svg";
 import HelpIcon from "../../../assets/help_icon.svg";
-import ListIcon from "../../../assets/list_icon.svg";
-import PhoneIcon from "../../../assets/phone_icon.svg";
 
 export default function SideNavigation() {
   return (
@@ -22,7 +20,7 @@ export default function SideNavigation() {
 
         <Stack mt="10" p="4" spacing={"10"}>
           <StackItem display={"flex"} gap="15px">
-            <Image src={HomeIcon} />
+            <HomeIcon />
             <Text fontWeight={"bold"} fontSize="md">
               Home
             </Text>

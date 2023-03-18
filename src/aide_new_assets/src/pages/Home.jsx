@@ -82,7 +82,7 @@ export default function Home() {
           zIndex={"0"}
           height="280px"
         >
-          <Image src="./hero.png" />
+          <Image src="https://i.ibb.co/G39XR6C/Rectangle-5.png" />
         </Box>
       </Flex>
 
@@ -232,7 +232,7 @@ export default function Home() {
         </Box>
 
         <Box alignSelf={"center"}>
-          <Image src="./about.png" w={"full"} />
+          <Image src="https://i.ibb.co/Y3yjH9q/Group-23.png" w={"full"} />
         </Box>
       </Flex>
 
