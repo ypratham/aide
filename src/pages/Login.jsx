@@ -16,6 +16,7 @@ import {
   InputGroup,
   InputRightAddon,
   useToast,
+  Link,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -143,6 +144,12 @@ export default function Login() {
               </InputRightAddon>
             </InputGroup>
           </FormControl>
+          <Flex gap="5px">
+            <Text>Don't have an account ?</Text>
+            <Link href="/register" textDecoration="underline">
+              Register
+            </Link>
+          </Flex>
           <Button
             bg="#35523F"
             color="white"

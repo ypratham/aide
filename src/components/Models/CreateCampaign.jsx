@@ -27,6 +27,7 @@ import {
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import { api } from "../../utils/api";
+import { useUserContext } from "../../utils/userContext";
 
 export default function CreateCampaign() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -68,10 +69,12 @@ export default function CreateCampaign() {
     }
   );
 
+  const { user } = useUserContext();
+
   const handleOnSubmit = (data) => {
     createCampaign.mutate({
       ...data,
-      createdBy: user._id,
+      createdBy: user._id || "6414e1a8816d45448aca7dfc",
       segregationOfAmount: {
         organizationName: "Dummy",
         organizationCode: "DM",

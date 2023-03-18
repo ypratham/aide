@@ -243,7 +243,7 @@ export default function AdminRegister() {
       <Flex gap="2">
         <Text>Already have an account? </Text>
         <Text color="aide.900" fontWeight={"bold"}>
-          <Link to="/login">Login</Link>
+          <Link href="/login">Login</Link>
         </Text>
       </Flex>
     </Grid>

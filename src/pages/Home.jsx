@@ -12,8 +12,11 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../utils/userContext";
 
 export default function Home() {
+  const { user } = useUserContext();
+
   return (
     <Box
       as="main"
@@ -59,7 +62,7 @@ export default function Home() {
             sagittis sapien. Phasellus sodales blandit augue eget ullamcorper.
             Integer non nisi finibus, consequat justo eu, ullamcorper ante.{" "}
           </Text>
-          <Link to={"/login"}>
+          <Link to={user ? "/dashboard/user" : "/login"}>
             <Button bg="aide.700" fontSize="md" color={"white"} _hover={{}}>
               Donate Now
             </Button>

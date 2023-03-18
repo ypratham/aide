@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import SideNavigation from "./pages/UserDashboard/SideNavigation";
+import UserCampaign from "./pages/UserDashboard/UserCampagin";
 import UserHome from "./pages/UserDashboard/UserHome";
 import { useUserContext } from "./utils/userContext";
 
@@ -24,7 +25,12 @@ function App() {
           )}
         </Route>
         <Route path="dashboard" element={<SideNavigation />}>
-          <Route path="/dashboard/user" index element={<UserHome />} />
+          <Route path="/dashboard/user" index element={<UserCampaign />} />
+          <Route
+            path="/dashboard/userCampaign"
+            index
+            element={<UserCampaign />}
+          />
           <Route path="/dashboard/admin" element={<AdminHome />} />
         </Route>
       </Routes>
